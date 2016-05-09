@@ -1,0 +1,114 @@
+/* from http://codepen.io/mladen___/pen/vCbrB */
+
+.paperplanes{
+	overflow: hidden;
+	perspective: 500px;
+}
+.plane{
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	top: 50%;
+	left: 50%;
+	margin: -300px 0 0 -990px;
+	transform: rotateZ(60deg) rotateX(60deg) rotateY(90deg) translateY(200%);
+	transform-style: preserve-3d;
+	z-index: 2;
+}
+.plane:nth-child(1){
+	-webkit-animation: planeOne 24000ms linear 1s infinite;
+	-moz-animation: planeOne 24000ms linear 1s infinite;
+	-ms-animation: planeOne 24000ms linear 1s infinite;
+	animation: planeOne 24000ms linear 1s infinite;
+}
+.plane:nth-child(2){
+	-webkit-animation: planeTwo 24000ms linear 12s infinite;
+	-moz-animation: planeTwo 24000ms linear 12s infinite;
+	-ms-animation: planeTwo 24000ms linear 12s infinite;
+	animation: planeTwo 24000ms linear 12s infinite;
+}
+.left-wing{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -50px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 100px 200px 0px;
+	border-color: transparent transparent #f286a0 transparent;
+	transform: translateX(50px) rotateZ(-4deg);
+	transform-origin: left top;
+}
+.right-wing{
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -50px;
+	border-style: solid;
+	border-width: 0 0px 200px 100px;
+	border-color: transparent transparent #f286a0 transparent;
+	transform: translateX(-50px) rotateZ(4deg);
+	transform-origin: right top;
+}
+.left-body{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -20px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 40px 200px 0px;
+	border-color: transparent transparent #cf6b8d transparent;
+	transform: translateX(20px) rotateZ(-4deg) rotateY(-110deg);
+	transform-origin: left top;
+}
+.right-body{
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -20px;
+	border-style: solid;
+	border-width: 0 0px 200px 40px;
+	border-color: transparent transparent #b0597b transparent;
+	transform: translateX(-20px) rotateZ(4deg) rotateY(110deg);
+	transform-origin: right top;
+}
+
+@keyframes planeOne {
+  0% {
+  	transform: rotateZ(60deg) rotateX(60deg) rotateY(90deg) translateY(200%);
+  	opacity: 1;
+  }
+  12%{
+  	opacity: 1;
+  }
+  15% {
+  	transform: rotateZ(60deg) rotateX(60deg) rotateY(180deg) translateY(-500%);
+	opacity:0;
+  }
+  100%{
+	  opacity: 0;
+  }
+}
+@keyframes planeTwo {
+  0% {
+  	transform: rotateZ(60deg) rotateX(60deg) rotateY(90deg) translateY(200%);
+  	opacity: 1;
+  }
+  12%{
+  	opacity: 1;
+  }
+  15% {
+  	transform: rotateZ(60deg) rotateX(60deg) rotateY(180deg) translateY(-500%);
+	opacity:0;
+  }
+  100%{
+	  opacity: 0;
+  }
+}
