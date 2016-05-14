@@ -15,10 +15,10 @@
 	transform-style: preserve-3d;
 }
 .plane:nth-child(1){
-	-webkit-animation: planeOne 24000ms linear 1s infinite;
-	-moz-animation: planeOne 24000ms linear 1s infinite;
-	-ms-animation: planeOne 24000ms linear 1s infinite;
-	animation: planeOne 24000ms linear 1s infinite;
+	-webkit-animation: planeOne 24000ms linear 4s infinite;
+	-moz-animation: planeOne 24000ms linear 4s infinite;
+	-ms-animation: planeOne 24000ms linear 4s infinite;
+	animation: planeOne 24000ms linear 4s infinite;
 }
 .plane:nth-child(2){
 	-webkit-animation: planeTwo 24000ms linear 12s infinite;

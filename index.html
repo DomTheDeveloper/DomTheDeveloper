@@ -4,8 +4,33 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <meta name="theme-color" content="#2196F3">
-    <title>Material UI One Page Theme</title>
+    <title>Dom the Developer</title>
+	
+  
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="js/jquery.lettering.js"></script>
+<script src="js/jquery.textillate.js"></script>
 
+
+	  <script src="js/writer.js"></script>
+	  <script>
+	  
+var j = $.noConflict();
+	  j( document ).ready(function() {
+			j(function () {
+				j('.tlt').textillate({initialDelay: 900});
+			})
+		});
+
+	  </script>
+	  
+	  
+    <!--  Scripts-->
+    <script src="min/plugin-min.js"></script>
+    <script src="min/custom-min.js"></script>
+	  
+  
+	  
     <!-- CSS  -->
     <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
     <link href="min/custom-min.css" type="text/css" rel="stylesheet">
@@ -14,17 +39,17 @@
     <link href="css/paperplanes.css" type="text/css" rel="stylesheet">
     <link href="css/linkstyles.css" type="text/css" rel="stylesheet" >
     <link href="css/balloons.css" type="text/css" rel="stylesheet">
-	
+    <link href="css/logo.css" type="text/css" rel="stylesheet">
+    <link href="css/animate.css" type="text/css" rel="stylesheet">
+    <link href="css/logo2.css" type="text/css" rel="stylesheet">
+  
 	<style>
-	
 		.plane{
 			z-index: 10;
 		}
-		
 		#title{
 			z-index:9;
 		}
-		
 		.balloon{
 			z-index:-1;
 		}
@@ -35,6 +60,8 @@
 	
 </head>
 <body id="top" class="scrollspy">
+
+
 
 <!-- Pre Loader -->
 <div id="loader-wrapper">
@@ -50,20 +77,54 @@
     <nav id="nav_f" class="default_color" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
-            <a href="#" id="logo-container" class="brand-logo">MD Template</a>
+            <a href="#" id="logo-container" class="brand-logo">
+			
+
+			<div class="html5">
+    
+    <div class="icon logo">
+
+        <div class="bg">
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="bottom"></div>
+            <div class="middle"></div>
+        </div>
+        <div class="overlay">
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="text">
+            <div class="left">
+                <div class="top"></div>
+                <div class="left"></div>
+                <div class="middlex"></div>
+                <div class="bottom"></div>
+                <div class="vertx"></div>
+            </div>
+            <div class="right">
+                <div class="topx"></div>
+                <div class="right"></div>
+                <div class="middlex"></div>
+                <div class="bottomx"></div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+			
+			
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#intro">Service</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="#intro">Service</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></li>
                 </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             </div>
@@ -104,8 +165,7 @@
 			
 		<div id="title">	
 			
-			
-  <span class="the">the</span>
+  <span class="the tlt" data-in-effect="rollIn" initialDelay="3000">the</span>
   
 			
 			<!-- http://editor.method.ac/ to write -->
@@ -180,6 +240,8 @@
 }
 
 .developer {
+  opacity: 0;
+  animation:blur .75s ease-in 3s 1 forwards;
   margin-left: -85px;
   font-size: 100px;
   text-shadow: 0 1px 0 #ccc,
@@ -196,11 +258,36 @@
                0 20px 20px rgba(0,0,0,.15);
 }
 
+
+@keyframes blur{
+  from{
+      text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+	  opacity:1;
+	  }
+	to{
+	opacity:1;
+	}
+}
+
     </style>
 
-  
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-      <script src="js/writer.js"></script>
 			
 			
         </h1>
@@ -358,16 +445,16 @@
                         <span class="card-title activator grey-text text-darken-4">Flash <br/>
                             <small><em><a class="red-text text-darken-1" href="#">CEO</a></em></small></span>
                         <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/dom.c.pereira">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_dom">
                                 <i class="fa fa-twitter-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
+                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+domPereira">
                                 <i class="fa fa-google-plus-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/domp">
                                 <i class="fa fa-linkedin-square"></i>
                             </a>
                         </p>
@@ -384,16 +471,16 @@
                             <small><em><a class="red-text text-darken-1" href="#">Designer</a></em></small>
                         </span>
                         <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/dom.c.pereira">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_dom">
                                 <i class="fa fa-twitter-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
+                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+domPereira">
                                 <i class="fa fa-google-plus-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/domp">
                                 <i class="fa fa-linkedin-square"></i>
                             </a>
                         </p>
@@ -410,16 +497,16 @@
                             Capt. America <br/>
                             <small><em><a class="red-text text-darken-1" href="#">CMO</a></em></small></span>
                         <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/dom.c.pereira">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_dom">
                                 <i class="fa fa-twitter-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
+                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+domPereira">
                                 <i class="fa fa-google-plus-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/domp">
                                 <i class="fa fa-linkedin-square"></i>
                             </a>
                         </p>
@@ -435,16 +522,16 @@
                         <span class="card-title activator grey-text text-darken-4">Robin<br/>
                             <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small></span>
                         <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
+                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/dom.c.pereira">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
+                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_dom">
                                 <i class="fa fa-twitter-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
+                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+domPereira">
                                 <i class="fa fa-google-plus-square"></i>
                             </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
+                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/domp">
                                 <i class="fa fa-linkedin-square"></i>
                             </a>
                         </p>
@@ -486,32 +573,32 @@
                 </form>
             </div>
             <div class="col l3 s12">
-                <h5 class="white-text">joashpereira.com</h5>
+                <h5 class="white-text">domthedeveloper.com</h5>
                 <ul>
-                    <li><a class="white-text" href="http://www.joashpereira.com/">Home</a></li>
-                    <li><a class="white-text" href="http://www.joashpereira.com/blog">Blog</a></li>
+                    <li><a class="white-text" href="http://www.domthedeveloper.com/">Home</a></li>
+                    <li><a class="white-text" href="http://www.domthedeveloper.com/blog">Blog</a></li>
                 </ul>
             </div>
             <div class="col l3 s12">
                 <h5 class="white-text">Social</h5>
                 <ul>
                     <li>
-                        <a class="white-text" href="https://www.behance.net/joashp">
+                        <a class="white-text" href="https://www.behance.net/domp">
                             <i class="small fa fa-behance-square white-text"></i> Behance
                         </a>
                     </li>
                     <li>
-                        <a class="white-text" href="https://www.facebook.com/joash.c.pereira">
+                        <a class="white-text" href="https://www.facebook.com/dom.c.pereira">
                             <i class="small fa fa-facebook-square white-text"></i> Facebook
                         </a>
                     </li>
                     <li>
-                        <a class="white-text" href="https://github.com/joashp">
+                        <a class="white-text" href="https://github.com/domp">
                             <i class="small fa fa-github-square white-text"></i> Github
                         </a>
                     </li>
                     <li>
-                        <a class="white-text" href="https://www.linkedin.com/in/joashp">
+                        <a class="white-text" href="https://www.linkedin.com/in/domp">
                             <i class="small fa fa-linkedin-square white-text"></i> Linkedin
                         </a>
                     </li>
@@ -521,15 +608,12 @@
     </div>
     <div class="footer-copyright default_color">
         <div class="container">
-            Made by <a class="white-text" href="http://joashpereira.com">Joash Pereira</a>. Thanks to <a class="white-text" href="http://materializecss.com/">materializecss</a>
+            (c). Thanks to <a class="white-text" href="http://materializecss.com/">materializecss</a>
         </div>
     </div>
 </footer>
 
 
-    <!--  Scripts-->
-    <script src="min/plugin-min.js"></script>
-    <script src="min/custom-min.js"></script>
 
     </body>
 </html>
