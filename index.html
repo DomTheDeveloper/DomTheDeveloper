@@ -13,6 +13,26 @@
     <link href="css/clouds.css" type="text/css" rel="stylesheet">
     <link href="css/paperplanes.css" type="text/css" rel="stylesheet">
     <link href="css/linkstyles.css" type="text/css" rel="stylesheet" >
+    <link href="css/balloons.css" type="text/css" rel="stylesheet">
+	
+	<style>
+	
+		.plane{
+			z-index: 10;
+		}
+		
+		#title{
+			z-index:9;
+		}
+		
+		.balloon{
+			z-index:-1;
+		}
+		.cloud, .cloudbase{
+			z-index:-2 !important;
+		}
+	</style>
+	
 </head>
 <body id="top" class="scrollspy">
 
@@ -70,20 +90,23 @@
 				<div class="left-wing"></div>
 			</div>
 			
-			<div class="cloud-1" data-speed="35000"></div>
-		
-			<div class="cloud-2" data-speed="45000" data-delay="15000"></div>
-		
-			<div class="cloud-3" data-speed="40000"></div>
-			<div class="cloud-4" data-speed="38000" data-delay="20000"></div>
+			
+			<div class="cloudbase">
+				<div class="cloud-1 cloud" data-speed="35000"></div>
+				<div class="cloud-2 cloud" data-speed="45000" data-delay="15000"></div>
+				<div class="cloud-3 cloud" data-speed="40000"></div>
+				<div class="cloud-4 cloud" data-speed="38000" data-delay="20000"></div>
+				<div class="cloud-5 cloud" data-speed="41000"></div>
+			</div>
+
 			
 			
-			<div class="cloud-5" data-speed="41000"></div>
 			
-			
+		<div id="title">	
 			
 			
   <span class="the">the</span>
+  
 			
 			<!-- http://editor.method.ac/ to write -->
     <div class="sigcontainer">
@@ -97,10 +120,32 @@
   </div>
   
   
-  <h1 class="developer">DEVELOPER</h1>
   
+  <h1 class="developer">DEVELOPER</h1>
+  </div>
+  
+  </div>
+  
+  			
+<ul id="scene">
+  <li data-depth="0.0" class="layer">
+    <div class="balloon balloon0"></div>
+  </li>
+  <li data-depth="0.2" class="layer">
+    <div class="balloon balloon2"></div>
+  </li>
+  <li data-depth="0.5" class="layer">
+    <div class="balloon balloon5"></div>
+  </li>
+  <li data-depth="0.7" class="layer">
+    <div class="balloon balloon7"></div>
+  </li>
+</ul>
       
         <style>
+		
+		
+		
 .sigcontainer {
 	position: absolute;
 	width: 400px;
@@ -155,8 +200,7 @@
 
   
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-        <script src="js/writer.js"></script>
+      <script src="js/writer.js"></script>
 			
 			
         </h1>

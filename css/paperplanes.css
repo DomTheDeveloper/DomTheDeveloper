@@ -13,7 +13,6 @@
 	margin: -300px 0 0 -990px;
 	transform: rotateZ(60deg) rotateX(60deg) rotateY(90deg) translateY(200%);
 	transform-style: preserve-3d;
-	z-index: 2;
 }
 .plane:nth-child(1){
 	-webkit-animation: planeOne 24000ms linear 1s infinite;
