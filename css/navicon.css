@@ -6,7 +6,6 @@
   cursor: pointer;
   user-select: none;
   opacity: .8;
-  display:none;
 }
 .navicon-button .navicon:before,
 .navicon-button .navicon:after {
@@ -34,6 +33,7 @@
   background: #fff;
   transition: 0.5s;
   border-radius: 2.5rem;
+  display:none;
 }
 .navicon:before, .navicon:after {
   display: block;
@@ -66,9 +66,4 @@
 /* Minus */
 .open .navicon-button{
   transform: scale(0.75);
-}
-
-.open .navicon-button{
-  width:0px !important;
-  height:0px !important;
 }
