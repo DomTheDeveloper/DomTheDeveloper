@@ -11,6 +11,7 @@
 <script src="js/jquery.lettering.js"></script>
 <script src="js/jquery.textillate.js"></script>
 
+    <script src="js/navicon.js"></script>
 
 	  <script src="js/writer.js"></script>
 	  <script>
@@ -18,7 +19,24 @@
 var j = $.noConflict();
 	  j( document ).ready(function() {
 			j(function () {
-				j('.tlt').textillate({initialDelay: 900});
+				j('.the').textillate({initialDelay: 900});
+				
+				/*
+				var $navicon = j('.navicon').textillate({ 
+					autoStart: false,
+					in: { effect: 'bounce' }
+				});
+
+				$navicon.on('mouseenter', function () {
+					$navicon.textillate('start');
+				});
+				*/
+				
+				setTimeout(function() {
+				j(".navicon-button").fadeIn("slow");
+				  j(".navicon-button").toggleClass("open");
+				}, 4500);
+				
 			})
 		});
 
@@ -42,6 +60,8 @@ var j = $.noConflict();
     <link href="css/logo.css" type="text/css" rel="stylesheet">
     <link href="css/animate.css" type="text/css" rel="stylesheet">
     <link href="css/logo2.css" type="text/css" rel="stylesheet">
+    <link href="css/navfadein.css" type="text/css" rel="stylesheet">
+    <link href="css/navicon.css" type="text/css" rel="stylesheet">
   
 	<style>
 		.plane{
@@ -115,18 +135,20 @@ var j = $.noConflict();
 			
 			
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#intro">Service</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="fade-in one"><a href="#intro">About</a></li>
+                    <li class="fade-in two"><a href="#work">Work</a></li>
+                    <li class="fade-in three"><a href="#team">Team</a></li>
+                    <li class="fade-in four"><a href="#contact">Contact</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="#intro">Service</a></li>
+                    <li><a href="#intro">About</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            <a href="#" data-activates="nav-mobile" class="button-collapse navicon-button open fade">
+					<div class="navicon"></div>
+			</a>
             </div>
         </div>
     </nav>
@@ -301,7 +323,7 @@ var j = $.noConflict();
     </div>
 </div>
 
-<!--Intro and service-->
+<!--Intro -->
 <div id="intro" class="section scrollspy">
     <div class="container">
         <div class="row">
