@@ -185,7 +185,7 @@ var j = $.noConflict();
 			
 		<div id="title">	
 			
-  <span class="the tlt" data-in-effect="rollIn" initialDelay="3000">the</span>
+  <span class="the tlt unselectable" unselectable="on" data-in-effect="rollIn" initialDelay="3000">the</span>
   
 			
 			<!-- http://editor.method.ac/ to write -->
@@ -201,7 +201,7 @@ var j = $.noConflict();
   
   
   
-  <h1 class="developer">DEVELOPER</h1>
+  <h1 class="developer unselectable" unselectable="on">DEVELOPER</h1>
   </div>
   
   </div>
@@ -224,7 +224,17 @@ var j = $.noConflict();
       
         <style>
 		
-		
+.unselectable{
+	cursor: default;
+
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+}
 		
 .sigcontainer {
 	position: absolute;
