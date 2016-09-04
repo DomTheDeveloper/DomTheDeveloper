@@ -26,18 +26,6 @@ ul li .balloon {
   -webkit-box-shadow: rgba(0, 0, 100, 0.2) -5px -5px 10px inset;
   box-shadow: rgba(0, 0, 100, 0.2) -5px -5px 10px inset;
 }
-ul li .balloon::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border-bottom: 10px solid rgba(212, 48, 71, 0.8);
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  bottom: -5px;
-  left: 50%;
-  margin-left: -10px;
-}
 ul li .balloon::before {
   content: "";
   width: 1px;
