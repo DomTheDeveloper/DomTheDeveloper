@@ -31,9 +31,6 @@
 	background: #fff;
   -webkit-border-radius: 100px;
 	        border-radius: 100px;
-	-webkit-transform: rotate(30deg);
-     -moz-transform: rotate(30deg);
-	        transform: rotate(30deg);
 }
 
 [class^="cloud-"]:after {
